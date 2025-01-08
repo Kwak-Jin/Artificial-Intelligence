@@ -1,7 +1,9 @@
 # 인공지능 응용
 ## 개요
+
 (4차 산업혁명) 산업의 전반은 정보의 고도화를 통해, DX를 넘어 AX를 가능케한다.    
-따라서 실제 인공지능은 산업의 전반에서 쓰이고 있으며, 이를 효율적으로 사용하기 위해 기본적인 스마트 팩토리, 제조 등에 대한 개념을 기록한다.     
+따라서 인공지능을 효율적으로 사용하기 위해 기본적인 스마트 팩토리, 제조, 산업, 이미지 처리 등에 대한 개념을 기록한다.    
+스마트 팩토리, 자율주행, 로보틱스 등 인공지능을 사용할 수 있는 범위 및 수단은 점차 진화할 것이다. 이에 대한 기본적인 개념을 잡아보자.
 ## 제조
 ### 생산
 - 생산이란 유/무형의 새로운 것을 만드는 것
@@ -95,6 +97,9 @@
 **Process in Product manufacturing**    
 1. Supplier
    1. SCM (Supply Chain Management)
+      - 기업 간에 존재하는 불합리한 낭비요소를 제거하고, 최저비용으로 고객이 요구하는 서비스 수준을 맞추어 제공함으로써 기업의 가치를 극대화하는 활동. 
+      - 원재료->중간재->제품 생산->최종 소비자까지 모든 제품과 정보의 흐름이 원활하고 효율적으로 수행할 수 있게 기업 간 또는 지역 간 경계를 극복하고 통합하여 일관되게 관리하고 전체를 최적화하는 것이다. 
+      - 이를 실현하기 위한 기반기술로는 QR, ECR, 바코드, POS, EDI, 전자메일, 전자자금결제 시스템 등이 있다.
       - 유통 납기 확인
       - 입고 관리
       - 협력사 관리
@@ -105,7 +110,11 @@
       - SC stock management
       - Partner & SC development management
 2. Design/ Development
-   1. PLM(Product Life cycle management)
+   1. PLM(Product Life cycle management) 제품주기관리시스템
+      - 제품에 관한 정보를 제품의 기획단계에서부터 설계-개발 -> 생산 -> 판매 -> 폐기에 이르기까지 제품의 라이프 사이클 전체를 관리하는 기법. 
+      - 산업이 고객 중심으로 전환되고, 제품 라이프 사이클이 감소하며, 설계-개발 기간이 축소됨에 따라 해당 시스템의 중요성이 도드라지고 있다.
+      - PLM을 통해 기업은 고객의 요구사항을 데이터화하고, 관련된 업무에 활용함으로써 적정한 시기에 제품이 시장에 출시될 수 있도록 한다.
+      - 제품의 품질은 1:10:100의 원리(손실비용의 크기: 설계단계 1, 생산단계 10, 출하단계 100)이기에, 제품의 라이프 사이클을 관리하는 것은 기업 수익 향상 관점에서도 필수적이다
       - 설계 데이터
       - 설계 이력
       - 협업 관리
@@ -116,12 +125,20 @@
       - Process planning and development management
       - Factory & line planning management
 3. Manufacturing/Quality
-   1. ERP (Enterprise resource planning)
+   1. ERP (Enterprise resource planning) 전사적 자원 관리
+      - 산업의 발달 -> 업무 기능 영역별 전산화 도입 -> 각기 상이한 시스템으로 인한 이중 작업, 비능률적인 요소 다수 발견 -> ERP의 도입(전 부문의 경영자원을 하나의 통합시스템으로 재구축)
       - 경영/실적 관리
       - 인사 관리
       - 재고 관리
       - Sales management
+      - MRP(Material Requirement Planning: 자재소요계획)
+      - MRP 1: 1960년대 초 등장, 1970년 도입된 자재관리시스템. 재고 감소 목적으로 자재소요량을 계획하고 관리하기 위한 단순한 정보시스템. 구체적 자재조달계획과 생산일정을 관리하는 관리기법
+      - MRP 2: 1980년대 등장. 제조 관련 부문의 전체적 최적화를 통해 효율적으로 자재를 관리할수 있도록 한 것. 스케일링 알고리즘, 시뮬레이션 등 생산활동분석기능을 강화하며 지능적제조관리 기법으로 발전. 오늘날 스마트제조의 MES(Manufacturing Execution System)에 해당. 제조프로세스의 최적화 관리로 생산성 향상에 목적을 두고 있다
+      - ERP 소프트웨어 도입이 바람직한 것은 맞으나, 시스템 도입비용이 비쌀 뿐 만 아니라 충실하고 정확한 기초정보를 필요로 한다. 
+      - 기업 내 조직에 적합하게 구현되기보다는 주어진 패키지에 조직이 맞추는 행태는 실패의 원인이 되기도 했다. 또한, ERP, MES, PLM 등을 각각 개별적으로 도입한 경우 역시 상호 연동 문제로 전체 시스템을 재구축하는 경우가 발생할 수 있다. 
+      - 따라서, 스마트제조를 성공적으로 구현하기 위해서는 소프트웨어의 단계적 도입이 바람직하다.
    2. MES (Manufacturing Execution System)
+        - ERP의 성공적 구축을 위해서는 생산의 기초정보(납기, 유연성, 원가, 품질, 생산성)에 대한 정확성이 필수적이다. 이때, MES는 다른 소프트웨어를 도입하는 기초 정보 역할을 한다.
         - 자재 관리
         - 작업 계획 지시 
         - 품질 관리 
@@ -129,9 +146,17 @@
         - 공정 관리
         - 데이터 수집 등
    3. SCADA (Supervisory Control and data acquisition)
+   4. FEMS(Factory Energy Management System: 공장에너지관리시스템)
+        - 생산활동 및 시설유지에 사용되는 에너지를 모니터링, 분석, 원격 제어하여 에너지를 효율적으로 사용하기 위한 에너지관리시스템. 
+        - 에너지 사용 효율화와 설비, 장비 등의 종합 라이프 사이클 관리를 가능케 한다. 
+        - 에너지를 기반으로 하는 제조업 생산시설에 적용될 필요가 있다.
+        - 생산스케줄 관리와 설비 제어 자동화 지원 뿐만 아니라, 스마트그리드 연계를 통한 에너지통합관리시스템을 궁극적으로 목표로 하므로, MES 구축 시 FEMS를 함께 구축하는 것이 좋다
 4. Delivery
 5. Customer
    1. CRM (Customer relation management)
+      - 고객에 대한 이해를 바탕으로 고객의 요구를 지속적으로 충족시켜 고객을 오래 유지시키고, 결과적으로 고객의 평생가치를 극대화시켜 수익성을 높이는 시스템. 
+      - 고객 데이터를 통합하고 분석한 결과를 다양한 고객 접점부서로 분배하여 활용하는 방식으로 이루어진다. 
+      - CRM은 기업마다 마케팅 환경과 내부 업무의 특성이 다르기에 기업 내에서 수행하는 기능을 중심으로 구축하면 된다.
       - Customer analysis 
       - Campaign management
       - Customer contact
@@ -198,14 +223,14 @@
 - Data technologies(DT)
 - Analytic Technologies(AT)
   - 5C Architecture enabling Cyberphysical System: Connection/Conversion/Cyber/Cognition/Configuration
-  - Data Driven Analysis: Prediction/ Fault Detection & Diagnosis
-   <img src="img/data_driven_analysis.png" alt="img.png" style="zoom:100%;" />
+  - Data Driven Analysis: Prediction/ Fault Detection & Diagnosis 
+  - <img src="img/data_driven_analysis.png" alt="img.png" style="zoom:100%;" />
 - Platform Technologies(PT)
 - Operation Technologies(OT).
 
 ### Digital Twin
-Cyberphysical Production System(CPPS)을 통해 디지털 트윈 달성     
-**Digital twin** integrates data from the physical system, analytical algorithms, and simulations to build a digital image of the physical system: from a machine component to an entire enterprise
+Cyberphysical Production System(CPPS)을 통해 디지털 트윈 달성         
+**Digital twin** integrates data from the physical system, analytical algorithms, and simulations to build a digital image of the physical system from a machine component to an entire enterprise     
 <img src="img/CPPS.png" alt="img.png" style="zoom:100%;" />
 
 ### 미래 추세
@@ -232,7 +257,7 @@ A typical large manufacturer’s information system is composed of:
 3. Operational data modeling, business intelligence(BI), ML, and process advisory tools
 4. A demilitarized zone representing a cybersecurity strategy of separating business and control networks
 
-Data 처리하는 것:    
+Data 처리:    
 - Collect
 - Store
 - Contextualize

@@ -14,13 +14,13 @@
    3. Semi-supervised
    4. Reinforcement
 ## Theory
-1. Perceptron
+### Perceptron
    1. Binary linear classifier
    $$z= w^Tx + b, x: input, w: weight, b: bias $$
    2. Decision boundary $$y = 0 \ if \ \ z<= 0 \ else  \ 1$$
    3. Linear Decision Boundary $\rightarrow$ Activation Function(Step) $\rightarrow$ Classification
 
-2. MLP/Forward Network
+### MLP/Forward Network
    1. MLP: Multi-Layer Perceptron
       1. Started from XOR gate (Linear Decision boundary is not suitable for XOR gate boundary)
       2. XOR gate can be splitted into $$y = (x_{1}x_{2})'(x_{1}+x_{2}) = AND(NAND(x_{1},x_{2}),OR(x_{1},x_{2}))$$
@@ -28,7 +28,7 @@
    2. Forward Network 
       1. The structure and operation of traditional neural networks where data moves in one direction—from input to output.
 
-3. Activation functions
+### Activation functions
    What is activation function?   
 
    - Transform input signal of a node in a neural network into an output signal that is then passed on to the next layer.
@@ -61,7 +61,7 @@
    3. ReLU: Rectified linear Unit
       - Not zero centered
 
-4. Loss functions
+### Loss functions
 
    - Minimize classification/ regression error
    - Avoid over-fitting in training
@@ -101,41 +101,27 @@
        - Underfitting: small datasets, over-generalizing/ high bias
 
      - L1 regularization
-
-       Adds the absolute value of the weights to the loss function as a penalty term.
-
-       tendency to produce sparse weights
-
+       - Adds the absolute value of the weights to the loss function as a penalty term. 
+       - tendency to produce sparse weights
      - L2 regularization
-
-       Adds the square of the weights to the loss function
-
-       produce small weights
-
+       - Adds the square of the weights to the loss function produce small weights.
+       - L2 regularization is fine with SGD, momentum optimization, and Nesterov momentum optimization, but not with Adam and its variants.
+       - To use Adam with weight decay, then use AdamW instead
      - Dropout
-
-       A technique where a random subset of neurons is "dropped out" (set to zero) during each training iteration. This prevents the model from becoming overly reliant on any specific set of features.
-
-       It effectively creates a different architecture for each training iteration, helping to improve generalization.
-
-       Large network는 overfit에 취약하다. 따라서 training 도중, network의 random node deactivation를 일부러 시켜서 남은 노드들의 영향력을 확인할 수 있다.
-
+       - A technique where a random subset of neurons is "dropped out" (set to zero) during each training iteration. This prevents the model from becoming overly reliant on any specific set of features. 
+       - It effectively creates a different architecture for each training iteration, helping to improve generalization. 
+       - Since dropout is only active during training, comparing the training loss and the validation loss can be misleading.  
+       - Large network는 overfit에 취약하다. 따라서 training 도중, network의 random node deactivation를 일부러 시켜서 남은 노드들의 영향력을 확인할 수 있다.
      - Early stopping
-
-       A form of regularization that involves monitoring the validation loss during training.
-
-       When the validation loss starts to increase after initially decreasing, training is stopped to prevent overfitting.
-
+       - A form of regularization that involves monitoring the validation loss during training. 
+       - When the validation loss starts to increase after initially decreasing, training is stopped to prevent overfitting.
      - Data augmentation
 
-       Generating additional training data through various transformations of the existing data (e.g., rotations, translations, scaling for images)
-
-       사진이면 돌려도 보고, 키워도 보고, 위치도 바꿔보고 등등 짜집어서 실제 test 혹은 validation에서 강인한 인지를 할 수 있게 만드는 기술이다.
-
-       It artificially increases the size and diversity of the training set, helping the model learn more robust features
+       - Generating additional training data through various transformations of the existing data (e.g., rotations, translations, scaling for images)
+       - 사진이면 돌려도 보고, 키워도 보고, 위치도 바꿔보고 등등 짜집어서 실제 test 혹은 validation에서 강인한 인지를 할 수 있게 만드는 기술이다.
+       - It artificially increases the size and diversity of the training set, helping the model learn more robust features
 
      - **Batch normalization**
-
        Although primarily used to speed up training and improve convergence, batch normalization can also have a regularizing effect by adding some noise to the inputs of each layer during training
        
        Complex and deep layers have tendency to have vanishing gradient problem (Layers near input remains relatively unchanged)
@@ -165,7 +151,7 @@
      - **확률적 경량 하강법(Stochastic Gradient Descent, SGD)**: 배치 크기로 1을 사용하여 각 개별 샘플에 대해 가중치를 업데이트합니다. 이 방법은 잡음이 더 많지만, 더 자주 업데이트하기 때문에 빠른 속도를 제공합니다.
      - **미니배치 경량 하강법(Mini-Batch Gradient Descent)**: 소규모 고정 배치(예: 32 또는 64 샘플)를 사용하여 가중치를 업데이트합니다. 이 방법은 일반적인 방식으로, 전체 배치와 확률적 경량 하강법의 장점을 결합한 것입니다.
 
-5. Backpropagation
+### Backpropagation
 
    [Video for backpropagation 1](https://www.youtube.com/watch?v=Ilg3gGewQ5U&t=11s)
 
@@ -173,7 +159,7 @@
 
    <img src="img/back_prop.png" alt="img.png" style="zoom:90%;" />
 
-6. Optimization
+### Optimization
 
    - Finding optimal W that minimizes loss function $$L(W)$$
    - Gradient descent: follows opposite gradient of loss function
@@ -183,17 +169,35 @@
    - Examples of gradient descent methods
      - SGD(Stochastic gradient descent)
      - mini-batch gradient descent
-     - adagrad
+     - adagrad: achieves this correction by scaling down the gradient vector along the steepest dimension. runs the risk of slowing down a bit too fast and never converging to the global optimum
      - momentum
-     - Adam
+     - Nesterov Accelerated Gradient
+     - RMSProp: 최근 iteration에서의 gradient를 쌓아서 adagrad보다 안정적인 optimizer
+     - Adam(adaptive moment estimation): Momentum optimizer + RMSProp
+     - AdaMax
    - Issues
      - Convergence: there may be multiple minima
        - depending on initial value, learning rate
      - How to calculate the gradient of loss function?
        - Use **backpropagation**
 
-7. Convolution
+### Convolution
 
+### Performance metrics
+#### Confusion matrix
+
+#### recall
+recall/ sensitivity/ true positive rate(TPR)    
+$$\text{Recall} ={TP \over TP+FN}$$ 
+ 
+#### precision
+the accuracy of the positive predictions
+$$\text{Precision} ={TP\over TP+FP}$$
+
+#### The Precision/Recall Trade-off
+Recall과 Precision은 Trade-off 관계     
+<img src="img/precision_recall_curve.png" alt="img.png" style="zoom:80%;" />    
+Recall만 보는 것/ Precision만 보는 것은 바람직하지 않은 방식이다.   
 
 ### Misc
 

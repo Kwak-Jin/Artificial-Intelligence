@@ -15,11 +15,24 @@ Why Machine Learning?
 5. LED 등
 
 ## Theory
-### Preprocessing
-
+### Preprocessing/데이터 전처리
 ### Feature Extraction
+#### Time domain feature extraction
 
-### Feature Selection
+#### Frequency domain feature extraction
+
+### Feature Selection/ Feature reduction
+#### Principal component analysis (PCA)
+
+#### Other dimension reduction technique
+##### Locally Linear Embedding(LLE)
+##### Multidimensional scaling(MDS)
+##### Linear discriminant analysis(LDA)
+
+### Machine Learning models
+#### Support Vector Machine (SVM)
+#### Decision Trees
+#### Ensemble method and Random forest
 
 ### Fault Diagnosis
 
