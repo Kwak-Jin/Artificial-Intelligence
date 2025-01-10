@@ -103,18 +103,18 @@ Time domain features(시간 영역)
   - 신호의 최고점을 찾고 이들 사이의 거리를 측정
   - $$X_{ppv}=max(x)-min(x)$$
 - CF(Crest factor): 
-  -  $$ X_{cf} = \frac{\max(|x_i|)}{X_{rms}}$$ 
+  -  $$ X_{cf} = {\max(|x_i|)\over X_{rms}}$$ 
   - 신호의 피크가 얼마나 큰지
   - 피크가 얼마나 강조되는지
   - CF가 높을수록 신호의 강한 피크가 많다는 것을 의미
 - IF(Impulse factor):
-  - $$ X_{if} = \frac{\max(|x_i|)}{\text{Mean Value}}$$
+  - $$ X_{if} = {\max(|x_i|) \over \text{Mean Value}}$$
   - 최대 진폭과 평균값의 비율
   - 급격한 변화의 존재에 대한 평가
   - 높을 수록 임펄스가 많다는 의미
   - 극단적인 변동성 분석
 - MF(Margin factor):
-  - $$ \text{Margin Factor} = \frac{\text{RMS Value}}{\text{Mean Value}}$$
+  - $$ \text{Margin Factor} = {\text{RMS Value}\over \text{Mean Value}}$$
   - 상대적인 안정성
   - 높을수록, 일관된 패턴을 가질 가능성 높음
 - SF(Shape factor)
@@ -123,21 +123,22 @@ Time domain features(시간 영역)
 - SNR (Signal to Noise Ratio)
   - Ratio of signal power and background noise ratio
   - important metric in assessing the quality of a signal
-  - $$\text{SNR} = 10 \log_{10}\left(\frac{P_{\text{signal}}}{P_{\text{noise}}}\right) \text{where} ( P_{\text{signal}} ) \text{ is the power of the signal and} ( P_{\text{noise}})$$
+  - $$\text{SNR} = 10 \log_{10}\left({P_{\text{signal}}\over P_{\text{noise}}}\right) \text{where} ( P_{\text{signal}} ) \text{ is the power of the signal and} ( P_{\text{noise}})$$
   - A higher SNR indicates a clearer signal with less interference from noise
   - expressed in dB scale
 - THD (Total Harmonic Distortion)
   - quantifies the distortion by nonlinear properties
   - compares the power of all harmonic components to the power of the fundamental frequency
-  - $$\text{THD} = 10 \log_{10}\left(\frac{P_{\text{harmonics}}}{P_{\text{fundamental}}}\right)$$ where, $$ P_{\text{harmonics}}$$ is the total power of harmonic frequencies
+  - $$\text{THD} = 10 \log_{10}\left({P_{\text{harmonics}}\over P_{\text{fundamental}}}\right)$$ where, $$ P_{\text{harmonics}}$$ is the total power of harmonic frequencies
   - Lower THD values indicate better signal fidelity
   - the output closely resembles the input without significant distortion
 - SINAD (Signal to Noise and Distortion Ratio)
   - the effects of both noise and distortion on the signal
   - provides a more complete picture of signal quality than SNR alone
-  - $$ \text{SINAD} = 10 \log_{10}\left(\frac{P_{\text{signal}}}{P_{\text{noise}} + P_{\text{distortion}}}\right)$$
+  - $$\text{SINAD} = 10 \log_{10}\left({P_{\text{signal}}\over P_{\text{noise}} + P_{\text{distortion}}}\right)$$
   - higher SINAD indicates a better quality signal
   - crucial in applications such as audio processing
+
 #### Frequency domain feature extraction
 **푸리에 변환**을 통해 주파수 영역으로 변환을 거침
 - 주파수 구성 요소 
