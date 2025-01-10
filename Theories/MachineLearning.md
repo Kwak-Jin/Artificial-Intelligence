@@ -103,18 +103,18 @@ Time domain features(시간 영역)
   - 신호의 최고점을 찾고 이들 사이의 거리를 측정
   - $$X_{ppv}=max(x)-min(x)$$
 - CF(Crest factor): 
-  -  $$ X_{cf} = {\max(|x_i|)\over X_{rms}}$$ 
+  - $$X_{cf} = {\max(|x_i|)\over X_{rms}}$$ 
   - 신호의 피크가 얼마나 큰지
   - 피크가 얼마나 강조되는지
   - CF가 높을수록 신호의 강한 피크가 많다는 것을 의미
 - IF(Impulse factor):
-  - $$ X_{if} = {\max(|x_i|) \over \text{Mean Value}}$$
+  - $$X_{if} = {\max(|x_i|) \over \text{Mean Value}}$$
   - 최대 진폭과 평균값의 비율
   - 급격한 변화의 존재에 대한 평가
   - 높을 수록 임펄스가 많다는 의미
   - 극단적인 변동성 분석
 - MF(Margin factor):
-  - $$ \text{Margin Factor} = {\text{RMS Value}\over \text{Mean Value}}$$
+  - $$\text{Margin Factor} = {\text{RMS Value}\over \text{Mean Value}}$$
   - 상대적인 안정성
   - 높을수록, 일관된 패턴을 가질 가능성 높음
 - SF(Shape factor)
