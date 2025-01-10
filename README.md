@@ -5,6 +5,7 @@
 **E-mail**: superbjin000105@gmail.com  
 **Github**: https://github.com/Kwak-Jin   
    
+[신호 처리](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/SignalProcessing.md)    
 [딥러닝 이론](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/DeepLearning.md)  
 [머신러닝 이론](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/MachineLearning.md)  
 [인공지능 응용](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/AI-Application.md)    
