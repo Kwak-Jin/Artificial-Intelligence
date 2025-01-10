@@ -120,22 +120,23 @@ Time domain features(시간 영역)
 - SF(Shape factor)
 - KF(Kurtosis factor)
 <img src="img/time_features.png" alt="img.png" style="zoom:80%;" />    
+**Quality/characteristic of signal**
 - SNR (Signal to Noise Ratio)
   - Ratio of signal power and background noise ratio
   - important metric in assessing the quality of a signal
-  - $$\text{SNR} = 10 \log_{10}\left({P_{\text{signal}}\over P_{\text{noise}}}\right) \text{where} ( P_{\text{signal}} ) \text{ is the power of the signal and} ( P_{\text{noise}})$$
+  - $$\text{SNR} = 10 \log_{10}({P_{\text{signal}}\over P_{\text{noise}}}) \text{where} ( P_{\text{signal}} ) \text{ is the power of the signal and} ( P_{\text{noise}})$$
   - A higher SNR indicates a clearer signal with less interference from noise
   - expressed in dB scale
 - THD (Total Harmonic Distortion)
   - quantifies the distortion by nonlinear properties
   - compares the power of all harmonic components to the power of the fundamental frequency
-  - $$\text{THD} = 10 \log_{10}\left({P_{\text{harmonics}}\over P_{\text{fundamental}}}\right)$$ where, $$ P_{\text{harmonics}}$$ is the total power of harmonic frequencies
+  - $$\text{THD} = 10 \log_{10}({P_{\text{harmonics}}\over P_{\text{fundamental}}})$$ where, $$P_{\text{harmonics}}$$ is the total power of harmonic frequencies
   - Lower THD values indicate better signal fidelity
   - the output closely resembles the input without significant distortion
 - SINAD (Signal to Noise and Distortion Ratio)
   - the effects of both noise and distortion on the signal
   - provides a more complete picture of signal quality than SNR alone
-  - $$\text{SINAD} = 10 \log_{10}\left({P_{\text{signal}}\over P_{\text{noise}} + P_{\text{distortion}}}\right)$$
+  - $$\text{SINAD} = 10 \log_{10}({P_{\text{signal}}\over P_{\text{noise}} + P_{\text{distortion}}})$$
   - higher SINAD indicates a better quality signal
   - crucial in applications such as audio processing
 
@@ -143,7 +144,7 @@ Time domain features(시간 영역)
 **푸리에 변환**을 통해 주파수 영역으로 변환을 거침
 - 주파수 구성 요소 
 - 스펙트럼 분석  
-- 
+
 
 ### Feature Selection/ Feature reduction
 #### Principal component analysis (PCA)
