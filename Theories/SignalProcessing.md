@@ -63,7 +63,64 @@ $$e^{-jx}= cos(x)-jsin(x)$$
 - Composite sinusoid
   - $$x(t)=x_1(t)+x_2(t)$$ is periodic if and only if their frequencies have common divisor
   - Fundamental frequency: greatest common divisor of $$\omega_1$$ and $$\omega_2$$
-
+- Periodic signal satisfying **certain conditions** can be expanded into an infinite sum of complex exponentials
+- [Dirichlet's Condition](https://dsaint31.tistory.com/377#Fourier%20Transform%EC%9D%B4%20%EA%B0%80%EB%8A%A5%ED%95%9C%20%EC%8B%A0%ED%98%B8-1-2)
+  - Convergence
+    - true value at continuous point
+    - averaged value at discontinuous(heaviside unit step)
+  - Existence
+    - Absolutely integrable
+    - Finite number of minima and maxima
+    - Bounded variation
+    - Finite number of discontinuities
+- Orthogonality of complex exponent
+  - complex exponents set play as one of orthogonal basis
+- Fourier expansion
+  - synthesis equation
+  - $$x(t) = \sum {c_{m}e^{jm\omega_{0}t}}$$
+- Fourier coefficient
+  - Coefficient is a complex number
+  - Fourier series coefficients of real-valued signal are conjugate symmetric 
+  - Gives information about the original signal's **frequency component**
+  - therefore, draw line spectra of the given signal that consist of magnitude and phase
+  - $$c_m = {1\over T}\int^{T/2}_{-T/2} x(t)e^{-jm\omega_{0}t}dt$$
+- Parseval's theorem
+  - Average power of the signal is equal to the sum of squared magnitude of fourier series coefficients
+  - **signal energy calculated in time-domain and frequency domain are the same**
+  - Fourier series coefficients: **distribution of power in frequencies**
+- Gibb's phenomenon
+  - if there is a jump discontinuity in a periodic signal, there should be a ripple more than 9%.
 ## Fourier Transform
+- Aperiodic signal: Signal with infinite period
+- $$X(j\omega) = F(x(t))=\int^{\infty}_{-\infty}x(t)e^{-j\omega t}dt$$
+- $$e^{-j\omega t}$$ acts as the functional basis of general CT(continuous time) signal
+- Connectivity with Fourier series
+  - $$Tc_m =X(j\omega)|_{\omega = m\omega_o}$$
+- Symmetricity holds
+  - $$X(-j\omega)=X^*(j\omega)$$
+- Existence condition
+  - absolutely integrable
+  - bounded and continuous
+  - finite total energy
 
-## Laplace Transform
+## Discrete Time Fourier Transform, Discrete Fourier Transform
+- **Ideal Sampling**  
+  - Continuous signals 2개의 곱으로 표현
+  - $$x[k]=x_d(t) \cong x(t)\sum_{k=-\infty}^{\infty}\delta(t-kT) = \sum_{k=-\infty}^{\infty}x(kT)\delta(t-kT)$$
+- **DT Fourier Transform(DTFT)**
+  - $$X_d(j\omega) = F\{x_d(t)\}=F\{x(t)\delta_s(t)\}$$
+  - $$X_d(j\omega)={1\over T}\sum^{\infty}_{k=-\infty} X(j(\omega -k\omega_s))$$
+  - Specturm of DT signal becomes periodic function in frequency domain (DTFT)
+  - continuous function in frequency
+  - $$X_d(j\omega)= X_d(j(\omega+\omega_s))$$
+  - $$|\omega|<={|\omega_s|\over2}$$
+  - Provides exact spectra
+  - Super resolution of spectra
+  - Heavy computational burden
+  - too many frequency components
+- **Discrete Fourier Transform(DFT)**
+  - Discretization of frequency spectrum
+  - $$X_d[m]=X_d(mD)=\sum^{N-1}_{k=0}x[k]W^{km},\ e^{-j2\pi/N}$$
+## Fast Fourier Transform
+- Time complexity of DFT $$O(n^2)$$
+- Time complexity of FFT $$O(n \ log(n))$$
