@@ -120,7 +120,9 @@ Time domain features(시간 영역)
 - SF(Shape factor)
 - KF(Kurtosis factor)
 <img src="img/time_features.png" alt="img.png" style="zoom:80%;" />    
-**Quality/characteristic of signal**
+
+**Quality/characteristic of signal** 
+
 - SNR (Signal to Noise Ratio)
   - Ratio of signal power and background noise ratio
   - important metric in assessing the quality of a signal
@@ -141,9 +143,11 @@ Time domain features(시간 영역)
   - crucial in applications such as audio processing
 
 #### Frequency domain feature extraction
-**푸리에 변환**을 통해 주파수 영역으로 변환을 거침
-- 주파수 구성 요소 
+**푸리에 변환**을 통해 주파수 영역으로 변환을 거침    
+[Go to 신호처리](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/SignalProcessing.md)
+- 주파수 구성 요소 분석
 - 스펙트럼 분석  
+
 
 
 ### Feature Selection/ Feature reduction
