@@ -147,8 +147,21 @@ Time domain features(시간 영역)
 [Go to 신호처리](https://github.com/Kwak-Jin/Artificial-Intelligence/blob/master/Theories/SignalProcessing.md)
 - 주파수 구성 요소 분석
 - 스펙트럼 분석  
+- Power Spectral Density (PSD)
+  - Measures the power of a signal’s frequency components, helping to identify how power is distributed over different frequencies
+- Spectrogram
+  - Provides a visual representation of the signal frequency as it varies with time.
+- Bandwidth
+- Peaks
+- Total Harmonic Distortion
+<img src="img/freq_features.png" alt="img.png" style="zoom:80%;" />    
+#### Time-Frequency Feature
+시간에 따라 시스템의 대역폭이 달라질 수도 있고 고장이나면 다른 주파수가 관측될 수 있다. 다만 일반적인 주파수 분석으로는 시간에 대한 분석이 없기 때문에 다음과 같은 기법을 사용할 수 있다.   
+일반적으로 3차원 그래프로 표시된다. (e.g. x축: 시간, y축: 주파수, z축: 해당 주파수 성분의 크기)  
+##### Short Time Fourier Transform(STFT)
 
-
+##### Spectral Kurtosis
+##### Spectral Entropy
 
 ### Feature Selection/ Feature reduction
 #### Principal component analysis (PCA)
