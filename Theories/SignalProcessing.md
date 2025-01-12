@@ -113,14 +113,29 @@ $$e^{-jx}= cos(x)-jsin(x)$$
   - Specturm of DT signal becomes periodic function in frequency domain (DTFT)
   - continuous function in frequency
   - $$X_d(j\omega)= X_d(j(\omega+\omega_s))$$
-  - $$|\omega|<={|\omega_s|\over2}$$
   - Provides exact spectra
   - Super resolution of spectra
   - Heavy computational burden
   - too many frequency components
+- Nyquist Sampling theorem
+  - Nyquist Sampling $$|\omega|<={|\omega_s|\over2}$$
+  - [Frequency folding](https://famtech.tistory.com/188)
+  - [Aliasing](https://ko.wikipedia.org/wiki/%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1)
+  - [참고](https://moonnote.tistory.com/133)
+  <img src="img/freqfolding.png" alt="img.png" style="zoom:100%;" />  
+
 - **Discrete Fourier Transform(DFT)**
-  - Discretization of frequency spectrum
+  - [DFT](https://infograph.tistory.com/323):Discretization of frequency spectrum
   - $$X_d[m]=X_d(mD)=\sum^{N-1}_{k=0}x[k]W^{km},\ e^{-j2\pi/N}$$
+  - 데이터의 개수 N만큼 복소평면 원상에서 나눈 값
+  - Frequency domain의 resolution은 데이터의 개수에 비례하여 작아진다.
+  - 최대 주파수는 샘플링 주파수의 절반에 해당하며, 데이터의 개수에 상관 없이 고정되어있는 값이다.
+  
+  <img src="img/DFT_mat.png" alt="img.png" style="zoom:100%;" />  
+
 ## Fast Fourier Transform
 - Time complexity of DFT $$O(n^2)$$
 - Time complexity of FFT $$O(n \ log(n))$$
+- Using symmetricity of W, [butterfly algorithm for FFT](https://blog.naver.com/specialist0/220976353638)
+- [참고 1](https://www.robots.ox.ac.uk/~sjrob/Teaching/SP/l7.pdf)
+- [참고 2](https://blog.naver.com/PostView.naver?blogId=crucian2k3&logNo=223172188722)
