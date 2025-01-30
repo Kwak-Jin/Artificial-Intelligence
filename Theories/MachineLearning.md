@@ -155,12 +155,25 @@ Time domain features(시간 영역)
 - Peaks
 - Total Harmonic Distortion
 <img src="img/freq_features.png" alt="img.png" style="zoom:80%;" />    
+
 #### Time-Frequency Feature
 시간에 따라 시스템의 대역폭이 달라질 수도 있고 고장이나면 다른 주파수가 관측될 수 있다. 다만 일반적인 주파수 분석으로는 시간에 대한 분석이 없기 때문에 다음과 같은 기법을 사용할 수 있다.   
 일반적으로 3차원 그래프로 표시된다. (e.g. x축: 시간, y축: 주파수, z축: 해당 주파수 성분의 크기)  
+
 ##### Short Time Fourier Transform(STFT)
+시간(구간)별로 어떤 주파수 성분이 있는지 나타낸다.
+- 구간 별로 신호를 끊어 FFT를 수행한다.(Framing)
+- 구간 별로 끊어서 관찰하게 된다면, 다른 주파수 성분을 포함할 수 있다. (e.g. 1번째와 n번째의 신호가 discontinous하기 때문에)
+- 따라서 Windowing을 통하여 어느정도 Continuous한 형태로 변환해야할 필요가 있다.
+- Hamming, Hanning 등 윈도우 기법이 상당수 존재한다.
+- 개인적인 생각으로 구간이 나눠져있다면 $$|sin({2\pi\times\over T}\times t)|$$를 곱해주기만 하면 될줄 알았는데 여러 문제(신호의 Power 등)가 있어서 이런저런 윈도우 기법이 존재하는 것 같다.
+- [링크 1](https://paeton.tistory.com/entry/Window-Function%EC%9D%84-%EC%93%B0%EB%8A%94-%EC%9D%B4%EC%9C%A0)
+- [링크 2](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lecroykorea&logNo=221549211257)
+- [STFT](https://sanghyu.tistory.com/37)를 통해 시간에 따라 어떻게 주파수 성분이 바뀌는지 볼 수 있다.
+- Spectogram으로 표현할 수 있다. 이는 MATLAB 함수 `get_stft()` 함수를 참고해보도록 하자
 
 ##### Spectral Kurtosis
+
 ##### Spectral Entropy
 
 ### Feature Selection/ Feature reduction
