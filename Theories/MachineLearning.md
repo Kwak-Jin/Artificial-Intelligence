@@ -181,13 +181,31 @@ Time domain features(시간 영역)
 
 #### Other dimension reduction technique
 ##### Locally Linear Embedding(LLE)
+
 ##### Multidimensional scaling(MDS)
+
 ##### Linear discriminant analysis(LDA)
 
 ### Machine Learning models
+
+#### Linear Regression
+
+#### Logistic Regression
+
 #### Support Vector Machine (SVM)
+
 #### Decision Trees
+
 #### Ensemble method and Random forest
+
+#### Gaussian Mixture Model(GMM)
+
+#### Hidden Markov Model(HMM)
+
+#### Gaussian Process(GP)
+
+[참고 1](https://velog.io/@chulhongsung/Gaussian-Process-1)   
+[참고 2](https://pasus.tistory.com/209)
 
 ### Fault Diagnosis
 
