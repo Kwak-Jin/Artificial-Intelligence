@@ -1,4 +1,5 @@
-# Artificial Intelligence 섹스
+# 곽자진지의 임질교실
+# Artificial Intelligence
 ## Author Jin Kwak
 ## Co-work with Gyeonheal An
 ### About: DL/ML/RL 관련 공부
