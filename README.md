@@ -1,6 +1,5 @@
 # Artificial Intelligence
 ## Author Jin Kwak
-## Co-work with Gyeonheal An
 ### About: DL/ML/RL 관련 공부
 ### Created: 2025.01.08
 **E-mail**: superbjin000105@gmail.com  
@@ -18,8 +17,3 @@
 4. Theory 부분은 한글과 영어 혼용으로 작성되었습니다.
 5. 참고한 서적은 다음과 같습니다.
    - Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow 3rd edition
-
-### Co-work시 주의 사항
-1. 개발 이전에 항상 `Update Project`로 수정 사항에 대한 업데이트를 진행 후 사용한다.   
-2. 작업 이후에 `Commit message`에 수정한 내용을 반영한다.   
-3. Push할 때 이상이 있는 경우, 곽진에게 연락한다.   
